@@ -15,20 +15,20 @@ with open("data.json") as json_file:
 
 @app.route('/')
 def home():
-    return '''<h1>Welcome to Dog Facts API</h1> <a href="https://dukengn.github.io/Dog-facts-API" target="blank">Documentation</a>'''
+    return '''<h1>Welcome to Space Facts API</h1>'''
 
 
-@app.route('/api/v1/resources/dogs/all', methods=['GET'])
+@app.route('/space-facts-api/v1/resources/fact/all', methods=['GET'])
 def api_all():
     print('Database length: ', len(data))
     return flask.jsonify(data)
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return "<h1>Error 404:</1><p>The resource could not be found. Please check your query</p>", 404
+    return "<h1>Error 404:</h1><p>The resource could not be found. Please check your query</p>", 404
 
 
-@app.route('/api/v1/resources/dogs', methods=['GET'])
+@app.route('/space-facts-api/v1/resources/fact', methods=['GET'])
 def api_number():
     results = []
     if 'number' in flask.request.args:
