@@ -1,15 +1,13 @@
-# Dog Facts API
+# Space Facts API
 
-An API that will return random facts about dog.
+An API that will return random facts about space.
 
-## Inspirations 
-+ The project is a port of [kinduff/dog-api](https://github.com/kinduff/dog-api) using Python with Flask.
-+ There is still no other dog facts api while there are many APIs supporting cat facts. It is unfair !!!
-+ I'm a dog person. Cats are jerks.
+## Credits
+Special thanks to @DukeNgn
 
 ## Usage:
 
-+ `https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all` to get all the facts at once.
++ `https://space-facts-api.techgenius7777.tech/api/v1/resources/fact/all` to get all the facts at once.
 + Change `all` to parameter `?number=` to specify the number of facts you want to receive.
 + Change `all` to parameter `?index=` to specify the index of the fact you are targeting.
 
@@ -24,11 +22,11 @@ An API that will return random facts about dog.
 + App starts at port 5000 by default, but can be configured with a `.env` file. 
 
 ## Example:
-+ `https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1` returns:
++ `https://space-facts-api.techgenius7777.tech/api/v1/resources/fact?number=1` returns:
 ```JSON
 [
     {
-        "fact": "Many foot disorders in dogs are caused by long toenails."
+        "fact": "There are more stars in the universe than grains of sand on all the beaches on Earth. That's at least a billion trillion!"
     }
 ]
 ```
@@ -37,10 +35,10 @@ An API that will return random facts about dog.
 ```JSON
 [
     {
-        "fact": "Endal was the first dog to ride on the London Eye (the characteristic ferris wheel in London, England), and was also the first known dog to successfully use a ATM machine."
+        "fact": "The hottest planet in our solar system is Venus."
     },
     {
-        "fact": "At the age of 4 weeks, most dogs have developed the majority of their vocalizations."
+        "fact": "According to mathematics, white holes are possible, although as of yet we have found none."
     }
 ]
 ```
