@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+# Space Facts API
 
-You can use the [editor on GitHub](https://github.com/The-Elements/Space-Facts-API/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+An API that will return random facts about space.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Credits
+Special thanks to @DukeNgn
 
-### Markdown
+## Usage:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
++ `https://space-facts-api.techgenius7777.tech/api/v1/resources/fact/all` to get all the facts at once.
++ Change `all` to parameter `?number=` to specify the number of facts you want to receive.
++ Change `all` to parameter `?index=` to specify the index of the fact you are targeting.
 
-```markdown
-Syntax highlighted code block
+## Rebuild the project:
++ Clone the repo.
++ Run `python3 -m venv .env` to create a virtual environment.
++ Run `source .env/bin/activate` to activate the virtual environment.
++ Run `pip install requirements.txt`.
++ Run `python3 app.py`.
++ App starts at port 5000 by default, but can be configured with a `.env` file. 
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Example:
++ `https://space-facts-api.techgenius7777.tech/api/v1/resources/fact?number=1` returns:
+```JSON
+[
+    {
+        "fact": "There are more stars in the universe than grains of sand on all the beaches on Earth. That's at least a billion trillion!"
+    }
+]
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/The-Elements/Space-Facts-API/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
++ `https://space-facts-api.techgenius7777.tech/api/v1/resources/fact?number=2` returns:
+```JSON
+[
+    {
+        "fact": "The hottest planet in our solar system is Venus."
+    },
+    {
+        "fact": "According to mathematics, white holes are possible, although as of yet we have found none."
+    }
+]
+```
