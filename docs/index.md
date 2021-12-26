@@ -2,7 +2,7 @@
 
 An API that will return random facts about space.
 
-## Credits
+## Credits:
 Special thanks to @DukeNgn
 
 ## Usage:
